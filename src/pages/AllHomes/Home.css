@@ -69,7 +69,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(#ffc107, #fcbf08)
+    background: linear-gradient(#fdbf08, #fcbf08)
 }
 
 @media screen and (max-width:760px) {
@@ -179,7 +179,7 @@ body {
 .recipe-list :hover {
     transform: scale(1.06);
     transition: .3s;
-    background-color: #ffc107;
+    background-color: #fdbf08;
 }
 
 .recipe-card {
