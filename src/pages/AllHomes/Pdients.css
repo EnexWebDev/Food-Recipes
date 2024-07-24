@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&display=swap');
+
+
+.img-ingredient img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.img-ingredient {
+    display: flex;
+    gap: 20px;
+    padding: 40px 100px;
+
+}
+
+.ingredientData h2 {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: lighter;
+
+}
+
+
+.ingredientData {
+    background: #f57f17;
+    padding: 20px 0px;
+}
+
+.ingredient_container {
+    padding: 40px 0px;
+}
+
+.ingredientData ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ingredientData ul li {
+    list-style-type: none;
+}
+
+.ingredients {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.Igredient-container {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100vh;
+}
+
+
+.Views{
+    padding: 40px 0px;
+    color: #fff;
+}
+.Views img {
+    width: 50%;
+}
+@media screen and (max-width:760px) {
+    .Views img {
+            width: 100%;
+        }
+    
+}
+.RecipeContainer h2{
+    color: #fff;
+}
+
+
+.RecipeContainer {
+    display: block;
+    margin: auto;
+    align-items: center;
+    padding: 30px 30px;
+    background: #fecb26;
+    width: 100%;
+}
+
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
