@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "./header.css"
 
-const Header = () => {
+const Header = ({ isLoginActive, toggleLoginModal }) => {
+
     return (
 		<>
 			<header class="header-nav">
@@ -16,11 +17,13 @@ const Header = () => {
 					<label for="menu-toggle" class="menu-icon">
 						&#9776;
 					</label>
-					<ul class="menu">
+					<ul class="menu text-light">
                         <li className='nav-link'> <Link to={'/'}>Home</Link></li>
-                        <li className='nav-link'> <Link to={'/ingredients'}>ingredients</Link></li>
-						<li className='nav-link'> <Link>Login  </Link> </li> <li className='nav-link text-light'>/</li>
-						<li className='nav-link'> <Link>Sign Up </Link> </li>
+                        <li className='nav-link'> <Link to={'/ingredients'}>ingredients</Link></li>	
+
+						<li className='nav-link' onClick={toggleLoginModal}> <Link>Login </Link> </li> 
+						<li className='nav-link'>/</li>
+						<li className='nav-link' onClick={toggleLoginModal}> <Link>Sign Up </Link> </li>
 					</ul>
 				</nav>
 			</header>

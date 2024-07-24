@@ -12,6 +12,7 @@ import RandomMeals from '../RandomMeals';
 import Ingredent from '../Ingredent';
 import Footer from '../../components/Footer';
 import Btop from '../Back to top/Btop';
+
 const Home = () => {
     const [Meals, setMeals] = useState([]);
     const [loading, setloading] = useState(true)
@@ -48,7 +49,7 @@ const Home = () => {
 
     return (
         <>
-            <div class="container-xxl py-5 bg-dark hero-header mb-5" >
+            <div class="container-fluid py-5 bg-dark hero-header mb-5" >
                 <div class="container my-5 py-5">
                     <div class="row align-items-center g-5" className=''>
                         <div data-aos="fade-up" class="text-center text-lg-start" className='Hero-page'>
