@@ -9,20 +9,36 @@ const RandomMeals = () => {
 
 
     useEffect(() => {
-        Aos.init()
-        const getRandom = async () => {
-            let response = await fetch(
-                'https://www.themealdb.com/api/json/v1/1/random.php'
-            );
-            let data = await response.json();
-            setData((prev) => [...prev, ...data.meals]);
+        
+        // const getRandom = async () => {
+        //     let response = await fetch(
+        //         'https://www.themealdb.com/api/json/v1/1/random.php'
+        //     );
+        //     let data = await response.json();
+        //     console.log("--------Data Returned-------", data)
+        //     setData((prev) => [...prev, ...data.meals]);
+        // };
+        // for (let i = 1; i <= 2; i++) {
+        //     getRandom();
+        // }
+
+        const fetchRandomMeals = async () => {
+            try {
+                const promises = Array.from({ length: 4 }, () =>
+                    fetch('https://www.themealdb.com/api/json/v1/1/random.php').then(response => response.json())
+                );
+                const results = await Promise.all(promises);
+                const meals = results.map(result => result.meals[0]);
+                setData(meals);
+            } catch (error) {
+                console.error('Error fetching random meals:', error);
+            }
         };
-        for (let i = 0; i < 2; i++) {
-            getRandom();
-        }
+
+        fetchRandomMeals();
     }, []);
-   
-    console.log(Data)
+
+    console.log("--------use state data-------", Data)
     return (
         <>
             <section>
