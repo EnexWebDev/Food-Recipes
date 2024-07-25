@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "./header.css"
 
-const Header = ({ isLoginActive, toggleLoginModal }) => {
+const Header = ({ isSignupActive, toggleSignupModal, toggleLoginModal }) => {
 
     return (
 		<>
@@ -22,8 +22,8 @@ const Header = ({ isLoginActive, toggleLoginModal }) => {
                         <li className='nav-link'> <Link to={'/ingredients'}>ingredients</Link></li>	
 
 						<li className='nav-link' onClick={toggleLoginModal}> <Link>Login </Link> </li> 
-						<li className='nav-link'>/</li>
-						<li className='nav-link' onClick={toggleLoginModal}> <Link>Sign Up </Link> </li>
+						<li className='nav-link slash'>/</li>
+						<li className='nav-link' onClick={toggleSignupModal}> <Link>Sign Up </Link> </li>
 					</ul>
 				</nav>
 			</header>

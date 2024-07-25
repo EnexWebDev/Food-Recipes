@@ -5,6 +5,7 @@ const LoginModal = ({ isLoginActive, toggleLoginModal }) => {
 
     return (
         <>
+        
             <div className={`loginModal ${isLoginActive ? 'active' : ''}`} onClick={toggleLoginModal}>
                 <div className="loginCard" onClick={(e) => e.stopPropagation()}>
                     <span className="title">
@@ -14,8 +15,9 @@ const LoginModal = ({ isLoginActive, toggleLoginModal }) => {
                     <form action="">
                         <input type="text"  name='username' id='username' placeholder='Username'/>
                         <input type="password" name="pwd" id="pwd" placeholder='Password'/>
-                        <button className='btn'>Login</button>
+                        
                     </form>
+                        <button className='btn'>Login</button>
                 </div>
             </div>
         </>
